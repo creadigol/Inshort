@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "840734005688",
+    "firebase_url": "https://inshort-8c22c.firebaseio.com",
+    "project_id": "inshort-8c22c",
+    "storage_bucket": "inshort-8c22c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840734005688:android:1462d3947ac47297",
+        "android_client_info": {
+          "package_name": "com.creadigol.inshort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840734005688-jqv9jh1af3hcuekom2f6u6fkqlfr5i0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtFIjKjDDt6V02_AURtCr4rEYFYIgcaoA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
