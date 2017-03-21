@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "840734005688",
-    "firebase_url": "https://inshort-8c22c.firebaseio.com",
-    "project_id": "inshort-8c22c",
-    "storage_bucket": "inshort-8c22c.appspot.com"
+    "project_number": "4630170490",
+    "firebase_url": "https://robotic-facet-134210.firebaseio.com",
+    "project_id": "robotic-facet-134210",
+    "storage_bucket": "robotic-facet-134210.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:840734005688:android:1462d3947ac47297",
+        "mobilesdk_app_id": "1:4630170490:android:0ba05fd70289b056",
         "android_client_info": {
-          "package_name": "com.creadigol.inshort"
+          "package_name": "com.creadigol.healthknowledge"
         }
       },
       "oauth_client": [
         {
-          "client_id": "840734005688-jqv9jh1af3hcuekom2f6u6fkqlfr5i0o.apps.googleusercontent.com",
+          "client_id": "4630170490-fpg6evss6ocip3q2a6hk00ctg8p5dalq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.creadigol.healthknowledge",
+            "certificate_hash": "9d70bd72dac9f32f9febe50a8b067398dc0a934b"
+          }
+        },
+        {
+          "client_id": "4630170490-vrt41enmdb0utvsvemiuqun4roin0vk7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDtFIjKjDDt6V02_AURtCr4rEYFYIgcaoA"
+          "current_key": "AIzaSyBE3iraZOrB8WIejlbw_30s86eg9i7WX5Y"
         }
       ],
       "services": {
@@ -29,8 +37,57 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4630170490-vrt41enmdb0utvsvemiuqun4roin0vk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4630170490:android:6ba8463376419501",
+        "android_client_info": {
+          "package_name": "com.creadigol.inshort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4630170490-verg5s6tli3mv1jhk3opbn45mm0bjno5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.creadigol.inshort",
+            "certificate_hash": "9d70bd72dac9f32f9febe50a8b067398dc0a934b"
+          }
+        },
+        {
+          "client_id": "4630170490-vrt41enmdb0utvsvemiuqun4roin0vk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE3iraZOrB8WIejlbw_30s86eg9i7WX5Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4630170490-vrt41enmdb0utvsvemiuqun4roin0vk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

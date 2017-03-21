@@ -15,6 +15,9 @@ public class PreferenceSettings {
     private String IsFirst = "true";
     private String Bookmark = "false";
     private String IsNeeded = "false";
+    private static final String CURRENT_DATE = "";
+    private static final String PREVIES_DATE = "";
+
 
     Context _context;
     private SharedPreferences sp;
@@ -26,6 +29,23 @@ public class PreferenceSettings {
         sp = _context.getSharedPreferences(NEWSAPP, context.MODE_PRIVATE);
         editor = sp.edit();
     }
+
+    public void setCurrentDate(String currentDate) {
+        editor.putString(CURRENT_DATE, currentDate).commit();
+    }
+
+    public String getCurrentDate() {
+        return sp.getString(CURRENT_DATE, null);
+    }
+
+    public void setPreviesDate(String previesDate) {
+        editor.putString(PREVIES_DATE, previesDate).commit();
+    }
+
+    public String getPreviesDate() {
+        return sp.getString(PREVIES_DATE, null);
+    }
+
 
     public boolean getBookmark() {
         return sp.getBoolean(Bookmark, false);

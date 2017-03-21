@@ -28,7 +28,7 @@
                 android:layout_margin="20dp"
                 android:background="@drawable/button_background"
                 android:padding="15dp"
-                android:src="@drawable/newsblue"
+                android:src="@drawable/newblue"
                 android:textSize="20sp" />
 
             <TextView
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="AllNews"
+                android:text="All News"
                 android:textColor="@color/gray"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -46,6 +46,7 @@
             android:id="@+id/ll_Bookmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
             <ImageView

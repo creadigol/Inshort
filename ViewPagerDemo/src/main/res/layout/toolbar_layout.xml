@@ -7,27 +7,43 @@
     android:fitsSystemWindows="true"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:theme="@style/MyCustomToolbarTheme">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tv_toolbar_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:textColor="#ffffff"
-        android:textSize="18sp" />
-    <ImageView
-        android:visibility="gone"
-        android:id="@+id/ivRight"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginRight="10dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/arrowright"
-        android:foregroundGravity="right" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/leftarrow"
+            android:text=""
+            android:layout_marginRight="10dp"
+            android:maxLines="1"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:foregroundGravity="right"
+            android:src="@drawable/rightarrow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/leftarrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:foregroundGravity="left"
+            android:src="@drawable/leftarrow"
+            android:visibility="gone" />
     </RelativeLayout>
 </android.support.v7.widget.Toolbar>

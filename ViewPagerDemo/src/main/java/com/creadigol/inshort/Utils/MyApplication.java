@@ -30,7 +30,7 @@ public class MyApplication extends Application {
     private PreferenceSettings mPreferenceSettings;
     private int MY_SOCKET_TIMEOUT_MS = 20000;
     public static int pageChnage;
-    public static boolean redirectTop=true;
+    public static boolean isNeeded=true;
     public static boolean bookmark=false;
     public static String link="www.google.com";
     public static String syncTime="0";

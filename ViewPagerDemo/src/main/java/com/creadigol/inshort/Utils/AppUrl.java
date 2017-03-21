@@ -9,5 +9,6 @@ public class AppUrl
     public static final String BASE_URL = "http://www.creadigol.biz/sexknowledge/api/";
 
     public static final String URL_GETDATA = BASE_URL + "date.php";
+    public static final String URL_SETGCM= BASE_URL + "gcm.php";
 
 }

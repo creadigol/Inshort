@@ -4,21 +4,31 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark">
 
-
-    <com.creadigol.verticalviewpager.VerticalViewPager
-        android:id="@+id/vertical_viewpager"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pulToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/adview" />
+        android:layout_height="match_parent">
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adview"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_footer" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <com.creadigol.verticalviewpager.VerticalViewPager
+                android:id="@+id/vertical_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/adview"
+                android:clickable="false"/>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="@string/banner_footer" />
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>

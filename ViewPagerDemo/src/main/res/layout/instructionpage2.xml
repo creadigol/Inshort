@@ -28,8 +28,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
-                    android:layout_marginTop="70dp"
-                    android:src="@drawable/validuser" />
+                    android:layout_marginTop="120dp"
+                    android:src="@drawable/personalize" />
 
                 <TextView
                     android:id="@+id/title"

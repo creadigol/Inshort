@@ -37,12 +37,12 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/read" />
+                        android:src="@drawable/completebookmark" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:gravity="center"
                         android:text="Great!"
                         android:textColor="@color/colorPrimaryDark"
@@ -54,7 +54,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:text="You have read all bookmarked stories"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/lightGray"
                         android:textSize="18sp" />
 
 
@@ -72,7 +72,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/bookmarkedfill" />
+                        android:src="@drawable/nobookmark" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -88,8 +88,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="Tap on title and add bookmark"
-                        android:textColor="@color/gray"
+                        android:text="Tap on title to \n bookmark a story"
+                        android:textColor="@color/lightGray"
                         android:textSize="18sp" />
 
 
@@ -106,15 +106,24 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
+                android:background="@color/whiteTranspent"
                 android:layout_height="?attr/actionBarSize">
-
+                <ImageView
+                    android:id="@+id/menubookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:src="@drawable/menu"
+                    android:visibility="visible" />
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/extraToolbar"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="@color/whiteTranspent"
+                    android:layout_marginLeft="35dp"
                     card_view:titleTextAppearance="@style/Toolbar.TitleText"
-                    card_view:titleTextColor="@color/gray" />
+                    card_view:titleTextColor="@color/colorPrimaryDark" />
 
 
                 <ImageView

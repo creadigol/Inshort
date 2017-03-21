@@ -1,0 +1,4 @@
+
+keystore :knowledge
+alias : knowledge
+password : knowledge

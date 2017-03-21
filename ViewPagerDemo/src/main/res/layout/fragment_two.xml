@@ -5,12 +5,9 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#000"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <include
+        android:id="@+id/toolbar_right"
+        layout="@layout/toolbar_layout" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -23,13 +20,24 @@
         android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/web"
+            layout="@layout/content_browser_full" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
     <LinearLayout
         android:id="@+id/ll_noNetwork"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:visibility="gone"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="100dp"
@@ -67,8 +75,4 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
-    <include
-        android:id="@+id/web"
-        layout="@layout/content_browser_full" />
 </LinearLayout>

@@ -206,11 +206,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cursor = sqldb.rawQuery(query, null);
         if (cursor == null) {
-            newsModel =false;
+            newsModel = false;
         } else if (cursor.getCount() == 0) {
-            newsModel =false;
+            newsModel = false;
         } else if (cursor.getCount() != 0) {
-            newsModel =true;
+            newsModel = true;
         }
 
         if (cursor != null) {
@@ -220,9 +220,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newsModel;
     }
 
+    public int getBookmakdata(int id) {
+        int values = 0;
+
+        SQLiteDatabase sqldb = this.getReadableDatabase();
+        String query = "select * from newsrecord where id='" + id + "'";
+
+        Cursor cursor = sqldb.rawQuery(query, null);
+        if (cursor == null) {
+            values = 1;
+        } else if (cursor.getCount() == 0) {
+            values = 1;
+        } else if (cursor.getCount() != 0) {
+            cursor.moveToFirst();
+            values = cursor.getInt(cursor.getColumnIndex(IS_BOOKMARKED));
+        }
+
+        if (cursor != null) {
+            cursor.close();
+        }
+        sqldb.close();
+        return values;
+    }
+
+    public int getPostion(int id) {
+        int postion = 0;
+
+        SQLiteDatabase sqldb = this.getReadableDatabase();
+        String query = "select * from newsrecord where sid='" + id + "'ORDER BY " + NEWS_ID + " DESC";
+
+        Cursor cursor = sqldb.rawQuery(query, null);
+        if (cursor == null) {
+            Log.e("", "" + postion);
+        } else if (cursor.getCount() == 0) {
+            postion = cursor.getColumnIndex("id");
+        } else if (cursor.getCount() != 0) {
+            cursor.moveToFirst();
+            postion = cursor.getInt(cursor.getColumnIndex("id"));
+        }
+
+        if (cursor != null) {
+            cursor.close();
+        }
+        sqldb.close();
+        return postion;
+    }
+
     public ArrayList<NewsModel> getBookmarkData() {
         String query = "select * from newsrecord where bookmarked= 0 " + " ORDER BY " + NEWS_ID + " DESC";
-Log.e("query ",""+query);
+        Log.e("query ", "" + query);
         ArrayList<NewsModel> newsModels = new ArrayList<NewsModel>();
         SQLiteDatabase database = getReadableDatabase();
         Cursor c = database.rawQuery(query, null);

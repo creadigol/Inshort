@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.creadigol.inshort.Fragment.ExtraFragment;
+import com.creadigol.inshort.Fragment.ReadBookmarsFragment;
 import com.creadigol.inshort.Fragment.NodataFragment;
-import com.creadigol.inshort.Fragment.RealAllFragment;
+import com.creadigol.inshort.Fragment.RealAllNewStoryFragment;
 import com.creadigol.inshort.Model.NewsModel;
 import com.creadigol.inshort.Utils.CommonUtils;
 import com.creadigol.inshort.Utils.MyApplication;
@@ -62,17 +62,17 @@ public class ContentFragmentAdapter extends FragmentPagerAdapter {
 
         public ContentFragmentAdapter set(ArrayList<NewsModel> newsModelArrayList) {
             PreferenceSettings mPreferenceSettings = MyApplication.getInstance().getPreferenceSettings();
-            if (newsModelArrayList.size() == 0 && !CommonUtils.isNetworkAvailable() && !mPreferenceSettings.getBookmark()) {
-                fragments.add(new NodataFragment(MyApplication.link));
+            if (newsModelArrayList.size() == 0 && !CommonUtils.isNetworkAvailable() && mPreferenceSettings.getBookmark() == false) {
+                fragments.add(new NodataFragment());
             }
-            if(newsModelArrayList.size()>0) {
-                for (int i = 0; i < newsModelArrayList.size(); i++) {
-                    fragments.add(ContentFragment.newInstance("test" + i, newsModelArrayList.get(i), i, "i"));
-                }
-                fragments.add(new RealAllFragment(MyApplication.link));
+            for (int i = 0; i < newsModelArrayList.size(); i++) {
+                fragments.add(ContentFragment.newInstance("test" + i, newsModelArrayList.get(i), i, "i"));
             }
-            if (mPreferenceSettings.getBookmark())
-                fragments.add(new ExtraFragment(MyApplication.link));
+            if (newsModelArrayList.size() > 0 && mPreferenceSettings.getBookmark() == false) {
+                fragments.add(new RealAllNewStoryFragment());
+            }
+            if (mPreferenceSettings.getBookmark() == true)
+                fragments.add(new ReadBookmarsFragment());
             return new ContentFragmentAdapter(manager, fragments);
         }
     }

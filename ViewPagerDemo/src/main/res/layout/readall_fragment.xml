@@ -37,7 +37,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/smiley" />
+                        android:src="@drawable/completebookmark" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="You have read all new stories\n refresh to get new stories"
+                        android:text="You have read all stories\n refresh to get new stories"
                         android:textColor="@color/gray"
                         android:textSize="18sp" />
 
@@ -71,15 +71,24 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
+                android:background="@color/whiteTranspent"
                 android:layout_height="?attr/actionBarSize">
-
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:src="@drawable/menu"
+                    android:visibility="visible" />
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/newstoolbar"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="35dp"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="@color/whiteTranspent"
                     card_view:titleTextAppearance="@style/Toolbar.TitleText"
-                    card_view:titleTextColor="@color/gray" />
+                    card_view:titleTextColor="@color/colorPrimaryDark" />
 
 
                 <ImageView
